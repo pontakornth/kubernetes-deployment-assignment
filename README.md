@@ -6,7 +6,7 @@ It is for the assignment only.
 
 1. Make sure you installed, Docker, `kubectl`, and `minikube`
 2. Clone this repo.
-3. Build the Dockerfile with `-t hello-kube`
+3. Build the Dockerfile with `docker build -t hello-kube .`
 4. Start Minikube `minikube start`
 5. Create deployment using `kubectl create -f deployment.yml`
 6. You can access `minikube service assignmentservice --url`
