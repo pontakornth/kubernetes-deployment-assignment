@@ -1,0 +1,42 @@
+---
+kind: Service
+apiVersion: v1
+metadata:
+  name: assignmentservice
+spec:
+  selector:
+    app: assignmentapp
+  ports:
+    - protocol: "TCP"
+      # Port accessible inside cluster
+      port: 8081
+      # Port to forward to inside the pod
+      targetPort: 8080
+      # Port accessible outside cluster
+      nodePort: 30009
+  type: LoadBalancer
+
+---
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: assignmentapp
+spec:
+  selector:
+    matchLabels:
+      app: assignmentapp
+  replicas: 4
+  template:
+    metadata:
+      labels:
+        app: assignmentapp
+    spec:
+      containers:
+        - name: assignmentapp
+          image: hello-kube # This is what I use to built.
+          imagePullPolicy: Never # Local image
+          env:
+            - name: PORT
+              value: "8080"
+          ports:
+            - containerPort: 8080
