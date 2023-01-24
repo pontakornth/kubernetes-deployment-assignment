@@ -1,0 +1,23 @@
+{
+  "name": "kubernetes-deployment-assignment",
+  "version": "1.0.0",
+  "description": "A simpl Kubernetes usage assignment. DO NOT COPY!",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pontakornth/kubernetes-deployment-assignment.git"
+  },
+  "author": "pontakornth",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pontakornth/kubernetes-deployment-assignment/issues"
+  },
+  "homepage": "https://github.com/pontakornth/kubernetes-deployment-assignment#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}
