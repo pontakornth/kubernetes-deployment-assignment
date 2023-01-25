@@ -15,6 +15,6 @@ The sixth step exposes the port. However, it will be a different port if Docker 
 
 ## Usage
 
-- `/` endpoint displays "Hello, World" message
+- `/video` endpoint streams a funny Big Buck Bunny video.
 - `/goodbye` endpoint crashes the program and exits with status 1
 
