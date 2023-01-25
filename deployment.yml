@@ -33,7 +33,7 @@ spec:
     spec:
       containers:
         - name: assignmentapp
-          image: hello-kube # This is what I use to built.
+          image: hello-kube:2 # This is what I use to built.
           imagePullPolicy: Never # Local image
           env:
             - name: PORT
